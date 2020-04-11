@@ -6,7 +6,7 @@ import numpy as np
 from torchvision import transforms
 import resnet
 import time
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 ##########   DATASET   ###########
 batch_size = 1
@@ -38,7 +38,7 @@ for i in range(0,1):
 		fea = out.cpu().data
 		fea = fea.numpy()
 
-		print i, num, np.shape(fea)
+		print(i, num, np.shape(fea))
 
 		for j in range(0, np.shape(fea)[0]):
 			str1 = ''
@@ -48,4 +48,4 @@ for i in range(0,1):
 			output.write(str1)
 	output.close()
 	fea_ex_time = time.time() - start_time
-	print fea_ex_time
+	print(fea_ex_time)

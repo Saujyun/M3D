@@ -144,13 +144,13 @@ def resnet50(pretrained='True', num_classes=1000, train=True):
 	static = model.state_dict()
 	for name, param in weight.items():
 		if name not in static:
-			print 'not load weight ', name, param.size(), param.dim()
+			print ('not load weight ', name, param.size(), param.dim()）
 			continue
 		if isinstance(param, nn.Parameter):
 			param = param.data
 			
 		if param.dim()>2:			
-			print 'load weight 3d conv: ', name, static[name].size()
+			print ('load weight 3d conv: ', name, static[name].size())
 			param = param.unsqueeze(2)
 			try:
 				static[name].copy_(param)
@@ -159,6 +159,6 @@ def resnet50(pretrained='True', num_classes=1000, train=True):
 				print (static[name].size(), param.size())
 			
 		else:
-			print 'load weight: ', name, static[name].size()
+			print ('load weight: ', name, static[name].size())
 			static[name].copy_(param)
 	return model

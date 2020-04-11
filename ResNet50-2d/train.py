@@ -6,7 +6,7 @@ import numpy as np
 from torchvision import transforms
 import resnet
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 ###########   HYPER   ###########
 base_lr = 0.001
 momentum = 0.9

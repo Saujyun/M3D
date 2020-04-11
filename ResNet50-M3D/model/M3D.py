@@ -82,7 +82,7 @@ class Bottleneck(nn.Module):
 
 		if self.downsample is not None:
 
-			out = out.view(out.size(0)/self.frames, self.frames, out.size(1), out.size(2),out.size(3))
+			out = out.view(int(out.size(0)/self.frames), self.frames, out.size(1), out.size(2),out.size(3))
 			out = torch.transpose(out, 1, 2)
 
 			out_t = self.conv2_t(out)
@@ -98,7 +98,7 @@ class Bottleneck(nn.Module):
 
 		if self.downsample is not None:
 			residual = self.downsample(x)
-			residual = residual.view(residual.size(0)/self.stride, self.stride, residual.size(1), residual.size(2),residual.size(3))
+			residual = residual.view(int(residual.size(0)/self.stride), self.stride, residual.size(1), residual.size(2),residual.size(3))
 			residual = residual.mean(1)
 
 		out += residual
@@ -136,7 +136,7 @@ class ResNet(nn.Module):
 		self.drop = nn.Dropout(0.5)
 		self.classifier = nn.Linear(self.num_features, num_classes)
 		init.normal(self.classifier.weight, std=0.001)
-	 	init.constant(self.classifier.bias, 0)
+		init.constant(self.classifier.bias, 0)
 
 		for m in self.modules():
 			if isinstance(m, nn.Conv2d):
@@ -168,7 +168,7 @@ class ResNet(nn.Module):
 		x = self.bn1(x)
 		x = self.relu(x)
 
-		x_t = x.view(x.size(0)/8, 8, x.size(1), x.size(2),x.size(3))
+		x_t = x.view(int(x.size(0)/8), 8, x.size(1), x.size(2),x.size(3))
 		x_t = torch.transpose(x_t, 1, 2)
 		x_t = self.conv1_t(x_t)
 		x_t = torch.transpose(x_t, 1, 2).contiguous()
@@ -199,11 +199,11 @@ def resnet50(pretrained='True', num_classes=1000, train=True):
 	static = model.state_dict()
 	for name, param in weight.items():
 		if name not in static:
-			print 'not load weight ', name
+			print ('not load weight ', name)
 			continue
 		if isinstance(param, nn.Parameter):			
 			param = param.data
-		print 'load weight ', name, type(param)
+		print ('load weight ', name, type(param))
 		static[name].copy_(param)
 	#model.load_state_dict(weight)
 	return model
