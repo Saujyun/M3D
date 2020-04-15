@@ -89,7 +89,7 @@ class ResNet(nn.Module):
 		self.drop = nn.Dropout(0.5)
 		self.classifier = nn.Linear(self.num_features, num_classes)
 		init.normal(self.classifier.weight, std=0.001)
-	 	init.constant(self.classifier.bias, 0)
+		init.constant(self.classifier.bias, 0)
 
 		for m in self.modules():
 			if isinstance(m, nn.BatchNorm3d):

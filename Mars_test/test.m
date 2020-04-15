@@ -9,7 +9,7 @@ label_query = label_gallery(query_IDX);
 cam_gallery = track_test(:, 4);
 cam_query = cam_gallery(query_IDX);
 
-name = 'fea_GLTR';
+name = 'fea13';
 box_feature_test = importdata(name);
 box_feature_test = box_feature_test'; % d*681089
 

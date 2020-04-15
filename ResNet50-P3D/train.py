@@ -4,7 +4,7 @@ import torch.backends.cudnn as cudnn
 from torch.autograd import Variable
 import numpy as np
 from torchvision import transforms
-import model.P3D_A, model.dataset
+import model.P3D_A,model.P3D_B,model.P3D_C, model.dataset
 
 sys.dont_write_bytecode = True
 
@@ -68,10 +68,10 @@ for epoch in range(0, num_epoches):
 
 		loss = criterion(out, label)
 		#print 'running_loss: ', running_loss
-		running_loss += loss.data[0] * label.size(0)
+		running_loss += loss.data * label.size(0)
 		_, pred = torch.max(out, 1)
 		num_correct = (pred == label).sum()
-		running_acc += num_correct.data[0]
+		running_acc += num_correct.data
 		optimizer.zero_grad()
 		loss.backward()
 		optimizer.step()

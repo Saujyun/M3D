@@ -1,0 +1,508 @@
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-P3D$ python train.py
+Traceback (most recent call last):
+  File "train.py", line 7, in <module>
+    import model.P3D_A, model.dataset
+  File "/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py", line 86
+    init.constant(self.classifier.bias, 0)
+                                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-P3D$ clear
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-P3D$ python train.py
+/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py:79: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+  init.kaiming_normal(self.feat.weight, mode='fan_out')
+/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py:80: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.feat.bias, 0)
+/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py:81: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.feat_bn.weight, 1)
+/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py:82: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.feat_bn.bias, 0)
+/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py:85: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.classifier.weight, std=0.001)
+/home/lhy/-/模型论文代码/M3D/ResNet50-P3D/model/P3D_A.py:86: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.classifier.bias, 0)
+load weight 3d conv:  conv1.weight torch.Size([64, 3, 1, 7, 7])
+load weight:  bn1.running_mean torch.Size([64])
+load weight:  bn1.running_var torch.Size([64])
+load weight:  bn1.weight torch.Size([64])
+load weight:  bn1.bias torch.Size([64])
+load weight 3d conv:  layer1.0.conv1.weight torch.Size([64, 64, 1, 1, 1])
+load weight:  layer1.0.bn1.running_mean torch.Size([64])
+load weight:  layer1.0.bn1.running_var torch.Size([64])
+load weight:  layer1.0.bn1.weight torch.Size([64])
+load weight:  layer1.0.bn1.bias torch.Size([64])
+load weight 3d conv:  layer1.0.conv2.weight torch.Size([64, 64, 1, 3, 3])
+load weight:  layer1.0.bn2.running_mean torch.Size([64])
+load weight:  layer1.0.bn2.running_var torch.Size([64])
+load weight:  layer1.0.bn2.weight torch.Size([64])
+load weight:  layer1.0.bn2.bias torch.Size([64])
+load weight 3d conv:  layer1.0.conv3.weight torch.Size([256, 64, 1, 1, 1])
+load weight:  layer1.0.bn3.running_mean torch.Size([256])
+load weight:  layer1.0.bn3.running_var torch.Size([256])
+load weight:  layer1.0.bn3.weight torch.Size([256])
+load weight:  layer1.0.bn3.bias torch.Size([256])
+load weight 3d conv:  layer1.0.downsample.0.weight torch.Size([256, 64, 1, 1, 1])
+load weight:  layer1.0.downsample.1.running_mean torch.Size([256])
+load weight:  layer1.0.downsample.1.running_var torch.Size([256])
+load weight:  layer1.0.downsample.1.weight torch.Size([256])
+load weight:  layer1.0.downsample.1.bias torch.Size([256])
+load weight 3d conv:  layer1.1.conv1.weight torch.Size([64, 256, 1, 1, 1])
+load weight:  layer1.1.bn1.running_mean torch.Size([64])
+load weight:  layer1.1.bn1.running_var torch.Size([64])
+load weight:  layer1.1.bn1.weight torch.Size([64])
+load weight:  layer1.1.bn1.bias torch.Size([64])
+load weight 3d conv:  layer1.1.conv2.weight torch.Size([64, 64, 1, 3, 3])
+load weight:  layer1.1.bn2.running_mean torch.Size([64])
+load weight:  layer1.1.bn2.running_var torch.Size([64])
+load weight:  layer1.1.bn2.weight torch.Size([64])
+load weight:  layer1.1.bn2.bias torch.Size([64])
+load weight 3d conv:  layer1.1.conv3.weight torch.Size([256, 64, 1, 1, 1])
+load weight:  layer1.1.bn3.running_mean torch.Size([256])
+load weight:  layer1.1.bn3.running_var torch.Size([256])
+load weight:  layer1.1.bn3.weight torch.Size([256])
+load weight:  layer1.1.bn3.bias torch.Size([256])
+load weight 3d conv:  layer1.2.conv1.weight torch.Size([64, 256, 1, 1, 1])
+load weight:  layer1.2.bn1.running_mean torch.Size([64])
+load weight:  layer1.2.bn1.running_var torch.Size([64])
+load weight:  layer1.2.bn1.weight torch.Size([64])
+load weight:  layer1.2.bn1.bias torch.Size([64])
+load weight 3d conv:  layer1.2.conv2.weight torch.Size([64, 64, 1, 3, 3])
+load weight:  layer1.2.bn2.running_mean torch.Size([64])
+load weight:  layer1.2.bn2.running_var torch.Size([64])
+load weight:  layer1.2.bn2.weight torch.Size([64])
+load weight:  layer1.2.bn2.bias torch.Size([64])
+load weight 3d conv:  layer1.2.conv3.weight torch.Size([256, 64, 1, 1, 1])
+load weight:  layer1.2.bn3.running_mean torch.Size([256])
+load weight:  layer1.2.bn3.running_var torch.Size([256])
+load weight:  layer1.2.bn3.weight torch.Size([256])
+load weight:  layer1.2.bn3.bias torch.Size([256])
+load weight 3d conv:  layer2.0.conv1.weight torch.Size([128, 256, 1, 1, 1])
+load weight:  layer2.0.bn1.running_mean torch.Size([128])
+load weight:  layer2.0.bn1.running_var torch.Size([128])
+load weight:  layer2.0.bn1.weight torch.Size([128])
+load weight:  layer2.0.bn1.bias torch.Size([128])
+load weight 3d conv:  layer2.0.conv2.weight torch.Size([128, 128, 1, 3, 3])
+load weight:  layer2.0.bn2.running_mean torch.Size([128])
+load weight:  layer2.0.bn2.running_var torch.Size([128])
+load weight:  layer2.0.bn2.weight torch.Size([128])
+load weight:  layer2.0.bn2.bias torch.Size([128])
+load weight 3d conv:  layer2.0.conv3.weight torch.Size([512, 128, 1, 1, 1])
+load weight:  layer2.0.bn3.running_mean torch.Size([512])
+load weight:  layer2.0.bn3.running_var torch.Size([512])
+load weight:  layer2.0.bn3.weight torch.Size([512])
+load weight:  layer2.0.bn3.bias torch.Size([512])
+load weight 3d conv:  layer2.0.downsample.0.weight torch.Size([512, 256, 1, 1, 1])
+load weight:  layer2.0.downsample.1.running_mean torch.Size([512])
+load weight:  layer2.0.downsample.1.running_var torch.Size([512])
+load weight:  layer2.0.downsample.1.weight torch.Size([512])
+load weight:  layer2.0.downsample.1.bias torch.Size([512])
+load weight 3d conv:  layer2.1.conv1.weight torch.Size([128, 512, 1, 1, 1])
+load weight:  layer2.1.bn1.running_mean torch.Size([128])
+load weight:  layer2.1.bn1.running_var torch.Size([128])
+load weight:  layer2.1.bn1.weight torch.Size([128])
+load weight:  layer2.1.bn1.bias torch.Size([128])
+load weight 3d conv:  layer2.1.conv2.weight torch.Size([128, 128, 1, 3, 3])
+load weight:  layer2.1.bn2.running_mean torch.Size([128])
+load weight:  layer2.1.bn2.running_var torch.Size([128])
+load weight:  layer2.1.bn2.weight torch.Size([128])
+load weight:  layer2.1.bn2.bias torch.Size([128])
+load weight 3d conv:  layer2.1.conv3.weight torch.Size([512, 128, 1, 1, 1])
+load weight:  layer2.1.bn3.running_mean torch.Size([512])
+load weight:  layer2.1.bn3.running_var torch.Size([512])
+load weight:  layer2.1.bn3.weight torch.Size([512])
+load weight:  layer2.1.bn3.bias torch.Size([512])
+load weight 3d conv:  layer2.2.conv1.weight torch.Size([128, 512, 1, 1, 1])
+load weight:  layer2.2.bn1.running_mean torch.Size([128])
+load weight:  layer2.2.bn1.running_var torch.Size([128])
+load weight:  layer2.2.bn1.weight torch.Size([128])
+load weight:  layer2.2.bn1.bias torch.Size([128])
+load weight 3d conv:  layer2.2.conv2.weight torch.Size([128, 128, 1, 3, 3])
+load weight:  layer2.2.bn2.running_mean torch.Size([128])
+load weight:  layer2.2.bn2.running_var torch.Size([128])
+load weight:  layer2.2.bn2.weight torch.Size([128])
+load weight:  layer2.2.bn2.bias torch.Size([128])
+load weight 3d conv:  layer2.2.conv3.weight torch.Size([512, 128, 1, 1, 1])
+load weight:  layer2.2.bn3.running_mean torch.Size([512])
+load weight:  layer2.2.bn3.running_var torch.Size([512])
+load weight:  layer2.2.bn3.weight torch.Size([512])
+load weight:  layer2.2.bn3.bias torch.Size([512])
+load weight 3d conv:  layer2.3.conv1.weight torch.Size([128, 512, 1, 1, 1])
+load weight:  layer2.3.bn1.running_mean torch.Size([128])
+load weight:  layer2.3.bn1.running_var torch.Size([128])
+load weight:  layer2.3.bn1.weight torch.Size([128])
+load weight:  layer2.3.bn1.bias torch.Size([128])
+load weight 3d conv:  layer2.3.conv2.weight torch.Size([128, 128, 1, 3, 3])
+load weight:  layer2.3.bn2.running_mean torch.Size([128])
+load weight:  layer2.3.bn2.running_var torch.Size([128])
+load weight:  layer2.3.bn2.weight torch.Size([128])
+load weight:  layer2.3.bn2.bias torch.Size([128])
+load weight 3d conv:  layer2.3.conv3.weight torch.Size([512, 128, 1, 1, 1])
+load weight:  layer2.3.bn3.running_mean torch.Size([512])
+load weight:  layer2.3.bn3.running_var torch.Size([512])
+load weight:  layer2.3.bn3.weight torch.Size([512])
+load weight:  layer2.3.bn3.bias torch.Size([512])
+load weight 3d conv:  layer3.0.conv1.weight torch.Size([256, 512, 1, 1, 1])
+load weight:  layer3.0.bn1.running_mean torch.Size([256])
+load weight:  layer3.0.bn1.running_var torch.Size([256])
+load weight:  layer3.0.bn1.weight torch.Size([256])
+load weight:  layer3.0.bn1.bias torch.Size([256])
+load weight 3d conv:  layer3.0.conv2.weight torch.Size([256, 256, 1, 3, 3])
+load weight:  layer3.0.bn2.running_mean torch.Size([256])
+load weight:  layer3.0.bn2.running_var torch.Size([256])
+load weight:  layer3.0.bn2.weight torch.Size([256])
+load weight:  layer3.0.bn2.bias torch.Size([256])
+load weight 3d conv:  layer3.0.conv3.weight torch.Size([1024, 256, 1, 1, 1])
+load weight:  layer3.0.bn3.running_mean torch.Size([1024])
+load weight:  layer3.0.bn3.running_var torch.Size([1024])
+load weight:  layer3.0.bn3.weight torch.Size([1024])
+load weight:  layer3.0.bn3.bias torch.Size([1024])
+load weight 3d conv:  layer3.0.downsample.0.weight torch.Size([1024, 512, 1, 1, 1])
+load weight:  layer3.0.downsample.1.running_mean torch.Size([1024])
+load weight:  layer3.0.downsample.1.running_var torch.Size([1024])
+load weight:  layer3.0.downsample.1.weight torch.Size([1024])
+load weight:  layer3.0.downsample.1.bias torch.Size([1024])
+load weight 3d conv:  layer3.1.conv1.weight torch.Size([256, 1024, 1, 1, 1])
+load weight:  layer3.1.bn1.running_mean torch.Size([256])
+load weight:  layer3.1.bn1.running_var torch.Size([256])
+load weight:  layer3.1.bn1.weight torch.Size([256])
+load weight:  layer3.1.bn1.bias torch.Size([256])
+load weight 3d conv:  layer3.1.conv2.weight torch.Size([256, 256, 1, 3, 3])
+load weight:  layer3.1.bn2.running_mean torch.Size([256])
+load weight:  layer3.1.bn2.running_var torch.Size([256])
+load weight:  layer3.1.bn2.weight torch.Size([256])
+load weight:  layer3.1.bn2.bias torch.Size([256])
+load weight 3d conv:  layer3.1.conv3.weight torch.Size([1024, 256, 1, 1, 1])
+load weight:  layer3.1.bn3.running_mean torch.Size([1024])
+load weight:  layer3.1.bn3.running_var torch.Size([1024])
+load weight:  layer3.1.bn3.weight torch.Size([1024])
+load weight:  layer3.1.bn3.bias torch.Size([1024])
+load weight 3d conv:  layer3.2.conv1.weight torch.Size([256, 1024, 1, 1, 1])
+load weight:  layer3.2.bn1.running_mean torch.Size([256])
+load weight:  layer3.2.bn1.running_var torch.Size([256])
+load weight:  layer3.2.bn1.weight torch.Size([256])
+load weight:  layer3.2.bn1.bias torch.Size([256])
+load weight 3d conv:  layer3.2.conv2.weight torch.Size([256, 256, 1, 3, 3])
+load weight:  layer3.2.bn2.running_mean torch.Size([256])
+load weight:  layer3.2.bn2.running_var torch.Size([256])
+load weight:  layer3.2.bn2.weight torch.Size([256])
+load weight:  layer3.2.bn2.bias torch.Size([256])
+load weight 3d conv:  layer3.2.conv3.weight torch.Size([1024, 256, 1, 1, 1])
+load weight:  layer3.2.bn3.running_mean torch.Size([1024])
+load weight:  layer3.2.bn3.running_var torch.Size([1024])
+load weight:  layer3.2.bn3.weight torch.Size([1024])
+load weight:  layer3.2.bn3.bias torch.Size([1024])
+load weight 3d conv:  layer3.3.conv1.weight torch.Size([256, 1024, 1, 1, 1])
+load weight:  layer3.3.bn1.running_mean torch.Size([256])
+load weight:  layer3.3.bn1.running_var torch.Size([256])
+load weight:  layer3.3.bn1.weight torch.Size([256])
+load weight:  layer3.3.bn1.bias torch.Size([256])
+load weight 3d conv:  layer3.3.conv2.weight torch.Size([256, 256, 1, 3, 3])
+load weight:  layer3.3.bn2.running_mean torch.Size([256])
+load weight:  layer3.3.bn2.running_var torch.Size([256])
+load weight:  layer3.3.bn2.weight torch.Size([256])
+load weight:  layer3.3.bn2.bias torch.Size([256])
+load weight 3d conv:  layer3.3.conv3.weight torch.Size([1024, 256, 1, 1, 1])
+load weight:  layer3.3.bn3.running_mean torch.Size([1024])
+load weight:  layer3.3.bn3.running_var torch.Size([1024])
+load weight:  layer3.3.bn3.weight torch.Size([1024])
+load weight:  layer3.3.bn3.bias torch.Size([1024])
+load weight 3d conv:  layer3.4.conv1.weight torch.Size([256, 1024, 1, 1, 1])
+load weight:  layer3.4.bn1.running_mean torch.Size([256])
+load weight:  layer3.4.bn1.running_var torch.Size([256])
+load weight:  layer3.4.bn1.weight torch.Size([256])
+load weight:  layer3.4.bn1.bias torch.Size([256])
+load weight 3d conv:  layer3.4.conv2.weight torch.Size([256, 256, 1, 3, 3])
+load weight:  layer3.4.bn2.running_mean torch.Size([256])
+load weight:  layer3.4.bn2.running_var torch.Size([256])
+load weight:  layer3.4.bn2.weight torch.Size([256])
+load weight:  layer3.4.bn2.bias torch.Size([256])
+load weight 3d conv:  layer3.4.conv3.weight torch.Size([1024, 256, 1, 1, 1])
+load weight:  layer3.4.bn3.running_mean torch.Size([1024])
+load weight:  layer3.4.bn3.running_var torch.Size([1024])
+load weight:  layer3.4.bn3.weight torch.Size([1024])
+load weight:  layer3.4.bn3.bias torch.Size([1024])
+load weight 3d conv:  layer3.5.conv1.weight torch.Size([256, 1024, 1, 1, 1])
+load weight:  layer3.5.bn1.running_mean torch.Size([256])
+load weight:  layer3.5.bn1.running_var torch.Size([256])
+load weight:  layer3.5.bn1.weight torch.Size([256])
+load weight:  layer3.5.bn1.bias torch.Size([256])
+load weight 3d conv:  layer3.5.conv2.weight torch.Size([256, 256, 1, 3, 3])
+load weight:  layer3.5.bn2.running_mean torch.Size([256])
+load weight:  layer3.5.bn2.running_var torch.Size([256])
+load weight:  layer3.5.bn2.weight torch.Size([256])
+load weight:  layer3.5.bn2.bias torch.Size([256])
+load weight 3d conv:  layer3.5.conv3.weight torch.Size([1024, 256, 1, 1, 1])
+load weight:  layer3.5.bn3.running_mean torch.Size([1024])
+load weight:  layer3.5.bn3.running_var torch.Size([1024])
+load weight:  layer3.5.bn3.weight torch.Size([1024])
+load weight:  layer3.5.bn3.bias torch.Size([1024])
+load weight 3d conv:  layer4.0.conv1.weight torch.Size([512, 1024, 1, 1, 1])
+load weight:  layer4.0.bn1.running_mean torch.Size([512])
+load weight:  layer4.0.bn1.running_var torch.Size([512])
+load weight:  layer4.0.bn1.weight torch.Size([512])
+load weight:  layer4.0.bn1.bias torch.Size([512])
+load weight 3d conv:  layer4.0.conv2.weight torch.Size([512, 512, 1, 3, 3])
+load weight:  layer4.0.bn2.running_mean torch.Size([512])
+load weight:  layer4.0.bn2.running_var torch.Size([512])
+load weight:  layer4.0.bn2.weight torch.Size([512])
+load weight:  layer4.0.bn2.bias torch.Size([512])
+load weight 3d conv:  layer4.0.conv3.weight torch.Size([2048, 512, 1, 1, 1])
+load weight:  layer4.0.bn3.running_mean torch.Size([2048])
+load weight:  layer4.0.bn3.running_var torch.Size([2048])
+load weight:  layer4.0.bn3.weight torch.Size([2048])
+load weight:  layer4.0.bn3.bias torch.Size([2048])
+load weight 3d conv:  layer4.0.downsample.0.weight torch.Size([2048, 1024, 1, 1, 1])
+load weight:  layer4.0.downsample.1.running_mean torch.Size([2048])
+load weight:  layer4.0.downsample.1.running_var torch.Size([2048])
+load weight:  layer4.0.downsample.1.weight torch.Size([2048])
+load weight:  layer4.0.downsample.1.bias torch.Size([2048])
+load weight 3d conv:  layer4.1.conv1.weight torch.Size([512, 2048, 1, 1, 1])
+load weight:  layer4.1.bn1.running_mean torch.Size([512])
+load weight:  layer4.1.bn1.running_var torch.Size([512])
+load weight:  layer4.1.bn1.weight torch.Size([512])
+load weight:  layer4.1.bn1.bias torch.Size([512])
+load weight 3d conv:  layer4.1.conv2.weight torch.Size([512, 512, 1, 3, 3])
+load weight:  layer4.1.bn2.running_mean torch.Size([512])
+load weight:  layer4.1.bn2.running_var torch.Size([512])
+load weight:  layer4.1.bn2.weight torch.Size([512])
+load weight:  layer4.1.bn2.bias torch.Size([512])
+load weight 3d conv:  layer4.1.conv3.weight torch.Size([2048, 512, 1, 1, 1])
+load weight:  layer4.1.bn3.running_mean torch.Size([2048])
+load weight:  layer4.1.bn3.running_var torch.Size([2048])
+load weight:  layer4.1.bn3.weight torch.Size([2048])
+load weight:  layer4.1.bn3.bias torch.Size([2048])
+load weight 3d conv:  layer4.2.conv1.weight torch.Size([512, 2048, 1, 1, 1])
+load weight:  layer4.2.bn1.running_mean torch.Size([512])
+load weight:  layer4.2.bn1.running_var torch.Size([512])
+load weight:  layer4.2.bn1.weight torch.Size([512])
+load weight:  layer4.2.bn1.bias torch.Size([512])
+load weight 3d conv:  layer4.2.conv2.weight torch.Size([512, 512, 1, 3, 3])
+load weight:  layer4.2.bn2.running_mean torch.Size([512])
+load weight:  layer4.2.bn2.running_var torch.Size([512])
+load weight:  layer4.2.bn2.weight torch.Size([512])
+load weight:  layer4.2.bn2.bias torch.Size([512])
+load weight 3d conv:  layer4.2.conv3.weight torch.Size([2048, 512, 1, 1, 1])
+load weight:  layer4.2.bn3.running_mean torch.Size([2048])
+load weight:  layer4.2.bn3.running_var torch.Size([2048])
+load weight:  layer4.2.bn3.weight torch.Size([2048])
+load weight:  layer4.2.bn3.bias torch.Size([2048])
+not load weight  fc.weight torch.Size([1000, 2048]) 2
+not load weight  fc.bias torch.Size([1000]) 1
+----------
+epoch 1
+[1/500] iter: 100/692. lr: 0.01 . Loss: 6.330218, Acc: 0.027500 time:34.4 s
+[1/500] iter: 200/692. lr: 0.01 . Loss: 6.271441, Acc: 0.034167 time:34.2 s
+[1/500] iter: 300/692. lr: 0.01 . Loss: 6.209794, Acc: 0.035278 time:34.4 s
+[1/500] iter: 400/692. lr: 0.01 . Loss: 6.157281, Acc: 0.038750 time:34.5 s
+[1/500] iter: 500/692. lr: 0.01 . Loss: 6.126552, Acc: 0.040167 time:34.5 s
+[1/500] iter: 600/692. lr: 0.01 . Loss: 6.083990, Acc: 0.042917 time:34.5 s
+[1/500] iter: 692/692. lr: 0.01 . Loss: 6.029297, Acc: 0.045039
+Finish 1 epoch, Loss: 6.033657, Acc: 0.045071
+----------
+epoch 2
+[2/500] iter: 100/692. lr: 0.01 . Loss: 5.582541, Acc: 0.072500 time:34.9 s
+[2/500] iter: 200/692. lr: 0.01 . Loss: 5.586556, Acc: 0.069583 time:34.6 s
+[2/500] iter: 300/692. lr: 0.01 . Loss: 5.545204, Acc: 0.069167 time:34.6 s
+[2/500] iter: 400/692. lr: 0.01 . Loss: 5.507330, Acc: 0.071875 time:34.6 s
+[2/500] iter: 500/692. lr: 0.01 . Loss: 5.478589, Acc: 0.072667 time:34.6 s
+[2/500] iter: 600/692. lr: 0.01 . Loss: 5.450328, Acc: 0.074583 time:34.6 s
+[2/500] iter: 692/692. lr: 0.01 . Loss: 5.409531, Acc: 0.077553
+Finish 2 epoch, Loss: 5.413442, Acc: 0.077609
+----------
+epoch 3
+[3/500] iter: 100/692. lr: 0.01 . Loss: 4.979831, Acc: 0.107500 time:35.0 s
+[3/500] iter: 200/692. lr: 0.01 . Loss: 5.030225, Acc: 0.101667 time:34.6 s
+[3/500] iter: 300/692. lr: 0.01 . Loss: 4.990616, Acc: 0.104167 time:34.6 s
+[3/500] iter: 400/692. lr: 0.01 . Loss: 4.955950, Acc: 0.110417 time:34.6 s
+[3/500] iter: 500/692. lr: 0.01 . Loss: 4.950657, Acc: 0.107833 time:34.6 s
+[3/500] iter: 600/692. lr: 0.01 . Loss: 4.899964, Acc: 0.111667 time:34.7 s
+[3/500] iter: 692/692. lr: 0.01 . Loss: 4.891746, Acc: 0.109586
+Finish 3 epoch, Loss: 4.895283, Acc: 0.109665
+----------
+epoch 4
+[4/500] iter: 100/692. lr: 0.01 . Loss: 4.628801, Acc: 0.114167 time:35.0 s
+[4/500] iter: 200/692. lr: 0.01 . Loss: 4.595207, Acc: 0.124167 time:34.6 s
+[4/500] iter: 300/692. lr: 0.01 . Loss: 4.569895, Acc: 0.131111 time:34.6 s
+[4/500] iter: 400/692. lr: 0.01 . Loss: 4.539828, Acc: 0.136042 time:34.7 s
+[4/500] iter: 500/692. lr: 0.01 . Loss: 4.525157, Acc: 0.135333 time:34.7 s
+[4/500] iter: 600/692. lr: 0.01 . Loss: 4.498890, Acc: 0.138056 time:34.7 s
+[4/500] iter: 692/692. lr: 0.01 . Loss: 4.487033, Acc: 0.138247
+Finish 4 epoch, Loss: 4.490278, Acc: 0.138347
+----------
+epoch 5
+[5/500] iter: 100/692. lr: 0.01 . Loss: 4.169855, Acc: 0.158333 time:35.0 s
+[5/500] iter: 200/692. lr: 0.01 . Loss: 4.170707, Acc: 0.170417 time:34.7 s
+[5/500] iter: 300/692. lr: 0.01 . Loss: 4.188612, Acc: 0.164167 time:34.7 s
+[5/500] iter: 400/692. lr: 0.01 . Loss: 4.176334, Acc: 0.165208 time:34.7 s
+[5/500] iter: 500/692. lr: 0.01 . Loss: 4.174807, Acc: 0.166833 time:34.7 s
+[5/500] iter: 600/692. lr: 0.01 . Loss: 4.180161, Acc: 0.164722 time:34.7 s
+[5/500] iter: 692/692. lr: 0.01 . Loss: 4.157716, Acc: 0.168232
+Finish 5 epoch, Loss: 4.160723, Acc: 0.168354
+----------
+epoch 6
+[6/500] iter: 100/692. lr: 0.01 . Loss: 3.930275, Acc: 0.186667 time:35.1 s
+[6/500] iter: 200/692. lr: 0.01 . Loss: 3.894485, Acc: 0.198333 time:34.7 s
+[6/500] iter: 300/692. lr: 0.01 . Loss: 3.885450, Acc: 0.200833 time:34.7 s
+[6/500] iter: 400/692. lr: 0.01 . Loss: 3.870964, Acc: 0.204583 time:34.6 s
+[6/500] iter: 500/692. lr: 0.01 . Loss: 3.867063, Acc: 0.205167 time:34.7 s
+[6/500] iter: 600/692. lr: 0.01 . Loss: 3.864422, Acc: 0.204167 time:34.6 s
+[6/500] iter: 692/692. lr: 0.01 . Loss: 3.857462, Acc: 0.204480
+Finish 6 epoch, Loss: 3.860251, Acc: 0.204628
+----------
+epoch 7
+[7/500] iter: 100/692. lr: 0.01 . Loss: 3.703271, Acc: 0.213333 time:35.0 s
+[7/500] iter: 200/692. lr: 0.01 . Loss: 3.649302, Acc: 0.221667 time:34.7 s
+[7/500] iter: 300/692. lr: 0.01 . Loss: 3.627662, Acc: 0.228056 time:34.7 s
+[7/500] iter: 400/692. lr: 0.01 . Loss: 3.616124, Acc: 0.233750 time:34.7 s
+[7/500] iter: 500/692. lr: 0.01 . Loss: 3.615691, Acc: 0.233667 time:34.7 s
+[7/500] iter: 600/692. lr: 0.01 . Loss: 3.603796, Acc: 0.233333 time:34.7 s
+[7/500] iter: 692/692. lr: 0.01 . Loss: 3.595309, Acc: 0.233382
+Finish 7 epoch, Loss: 3.597909, Acc: 0.233550
+----------
+epoch 8
+[8/500] iter: 100/692. lr: 0.01 . Loss: 3.321797, Acc: 0.267500 time:35.0 s
+[8/500] iter: 200/692. lr: 0.01 . Loss: 3.297315, Acc: 0.274583 time:34.7 s
+[8/500] iter: 300/692. lr: 0.01 . Loss: 3.321612, Acc: 0.272778 time:34.7 s
+[8/500] iter: 400/692. lr: 0.01 . Loss: 3.332782, Acc: 0.272500 time:34.7 s
+[8/500] iter: 500/692. lr: 0.01 . Loss: 3.327681, Acc: 0.271667 time:34.7 s
+[8/500] iter: 600/692. lr: 0.01 . Loss: 3.322945, Acc: 0.273889 time:34.7 s
+[8/500] iter: 692/692. lr: 0.01 . Loss: 3.324001, Acc: 0.272640
+Finish 8 epoch, Loss: 3.326404, Acc: 0.272837
+----------
+epoch 9
+[9/500] iter: 100/692. lr: 0.01 . Loss: 3.178741, Acc: 0.291667 time:35.0 s
+[9/500] iter: 200/692. lr: 0.01 . Loss: 3.152841, Acc: 0.289583 time:34.7 s
+[9/500] iter: 300/692. lr: 0.01 . Loss: 3.176418, Acc: 0.294167 time:34.6 s
+[9/500] iter: 400/692. lr: 0.01 . Loss: 3.152833, Acc: 0.298750 time:34.6 s
+[9/500] iter: 500/692. lr: 0.01 . Loss: 3.166609, Acc: 0.297167 time:34.7 s
+[9/500] iter: 600/692. lr: 0.01 . Loss: 3.157890, Acc: 0.299306 time:34.7 s
+[9/500] iter: 692/692. lr: 0.01 . Loss: 3.133849, Acc: 0.301060
+Finish 9 epoch, Loss: 3.136115, Acc: 0.301277
+----------
+epoch 10
+[10/500] iter: 100/692. lr: 0.01 . Loss: 3.021423, Acc: 0.317500 time:35.1 s
+[10/500] iter: 200/692. lr: 0.01 . Loss: 3.015783, Acc: 0.324583 time:34.7 s
+[10/500] iter: 300/692. lr: 0.01 . Loss: 2.980039, Acc: 0.330000 time:34.7 s
+[10/500] iter: 400/692. lr: 0.01 . Loss: 2.968308, Acc: 0.331667 time:34.7 s
+[10/500] iter: 500/692. lr: 0.01 . Loss: 2.977827, Acc: 0.328333 time:34.7 s
+[10/500] iter: 600/692. lr: 0.01 . Loss: 2.978617, Acc: 0.326389 time:34.7 s
+[10/500] iter: 692/692. lr: 0.01 . Loss: 2.962200, Acc: 0.328516
+Finish 10 epoch, Loss: 2.964342, Acc: 0.328754
+----------
+epoch 11
+[11/500] iter: 100/692. lr: 0.01 . Loss: 2.758991, Acc: 0.365833 time:35.0 s
+[11/500] iter: 200/692. lr: 0.01 . Loss: 2.788610, Acc: 0.358333 time:34.6 s
+[11/500] iter: 300/692. lr: 0.01 . Loss: 2.793290, Acc: 0.354167 time:34.7 s
+[11/500] iter: 400/692. lr: 0.01 . Loss: 2.783204, Acc: 0.359375 time:34.7 s
+[11/500] iter: 500/692. lr: 0.01 . Loss: 2.800845, Acc: 0.355333 time:34.7 s
+[11/500] iter: 600/692. lr: 0.01 . Loss: 2.811123, Acc: 0.352639 time:34.7 s
+[11/500] iter: 692/692. lr: 0.01 . Loss: 2.813515, Acc: 0.352119
+Finish 11 epoch, Loss: 2.815550, Acc: 0.352374
+----------
+epoch 12
+[12/500] iter: 100/692. lr: 0.01 . Loss: 2.701311, Acc: 0.375833 time:35.0 s
+[12/500] iter: 200/692. lr: 0.01 . Loss: 2.641710, Acc: 0.379167 time:34.7 s
+[12/500] iter: 300/692. lr: 0.01 . Loss: 2.661497, Acc: 0.375556 time:34.7 s
+[12/500] iter: 400/692. lr: 0.01 . Loss: 2.668836, Acc: 0.371875 time:34.7 s
+[12/500] iter: 500/692. lr: 0.01 . Loss: 2.663399, Acc: 0.374000 time:34.7 s
+[12/500] iter: 600/692. lr: 0.01 . Loss: 2.674189, Acc: 0.372639 time:34.7 s
+[12/500] iter: 692/692. lr: 0.01 . Loss: 2.662500, Acc: 0.376806
+Finish 12 epoch, Loss: 2.664425, Acc: 0.377079
+----------
+epoch 13
+[13/500] iter: 100/692. lr: 0.01 . Loss: 2.529568, Acc: 0.405000 time:35.0 s
+[13/500] iter: 200/692. lr: 0.01 . Loss: 2.495525, Acc: 0.413333 time:34.7 s
+[13/500] iter: 300/692. lr: 0.01 . Loss: 2.513002, Acc: 0.412778 time:34.7 s
+[13/500] iter: 400/692. lr: 0.01 . Loss: 2.521953, Acc: 0.408958 time:34.7 s
+[13/500] iter: 500/692. lr: 0.01 . Loss: 2.516900, Acc: 0.407333 time:34.7 s
+[13/500] iter: 600/692. lr: 0.01 . Loss: 2.522557, Acc: 0.406528 time:34.7 s
+[13/500] iter: 692/692. lr: 0.01 . Loss: 2.544780, Acc: 0.399807
+Finish 13 epoch, Loss: 2.546621, Acc: 0.400096
+----------
+epoch 14
+[14/500] iter: 100/692. lr: 0.01 . Loss: 2.558932, Acc: 0.406667 time:35.1 s
+[14/500] iter: 200/692. lr: 0.01 . Loss: 2.518975, Acc: 0.402917 time:34.7 s
+[14/500] iter: 300/692. lr: 0.01 . Loss: 2.487538, Acc: 0.404444 time:34.8 s
+[14/500] iter: 400/692. lr: 0.01 . Loss: 2.447399, Acc: 0.412083 time:34.8 s
+[14/500] iter: 500/692. lr: 0.01 . Loss: 2.453693, Acc: 0.415833 time:34.7 s
+[14/500] iter: 600/692. lr: 0.01 . Loss: 2.476944, Acc: 0.414167 time:34.7 s
+[14/500] iter: 692/692. lr: 0.01 . Loss: 2.480034, Acc: 0.413295
+Finish 14 epoch, Loss: 2.481827, Acc: 0.413594
+----------
+epoch 15
+[15/500] iter: 100/692. lr: 0.01 . Loss: 2.298561, Acc: 0.440000 time:35.1 s
+[15/500] iter: 200/692. lr: 0.01 . Loss: 2.291536, Acc: 0.441250 time:34.7 s
+[15/500] iter: 300/692. lr: 0.01 . Loss: 2.295416, Acc: 0.445000 time:34.7 s
+[15/500] iter: 400/692. lr: 0.01 . Loss: 2.318573, Acc: 0.439583 time:34.7 s
+[15/500] iter: 500/692. lr: 0.01 . Loss: 2.322982, Acc: 0.439833 time:34.7 s
+[15/500] iter: 600/692. lr: 0.01 . Loss: 2.315008, Acc: 0.442639 time:34.7 s
+[15/500] iter: 692/692. lr: 0.01 . Loss: 2.315662, Acc: 0.440511
+Finish 15 epoch, Loss: 2.317336, Acc: 0.440829
+----------
+epoch 16
+[16/500] iter: 100/692. lr: 0.01 . Loss: 2.224987, Acc: 0.460000 time:35.0 s
+[16/500] iter: 200/692. lr: 0.01 . Loss: 2.237451, Acc: 0.454167 time:34.7 s
+[16/500] iter: 300/692. lr: 0.01 . Loss: 2.226558, Acc: 0.458333 time:34.7 s
+[16/500] iter: 400/692. lr: 0.01 . Loss: 2.257822, Acc: 0.451458 time:34.7 s
+[16/500] iter: 500/692. lr: 0.01 . Loss: 2.252828, Acc: 0.451667 time:34.8 s
+[16/500] iter: 600/692. lr: 0.01 . Loss: 2.249336, Acc: 0.452222 time:34.7 s
+[16/500] iter: 692/692. lr: 0.01 . Loss: 2.238764, Acc: 0.450265
+Finish 16 epoch, Loss: 2.240383, Acc: 0.450590
+----------
+epoch 17
+[17/500] iter: 100/692. lr: 0.01 . Loss: 2.093336, Acc: 0.486667 time:35.1 s
+[17/500] iter: 200/692. lr: 0.01 . Loss: 2.093259, Acc: 0.482083 time:34.8 s
+[17/500] iter: 300/692. lr: 0.01 . Loss: 2.121936, Acc: 0.480833 time:34.7 s
+[17/500] iter: 400/692. lr: 0.01 . Loss: 2.143793, Acc: 0.476875 time:34.7 s
+[17/500] iter: 500/692. lr: 0.01 . Loss: 2.124856, Acc: 0.481833 time:34.7 s
+[17/500] iter: 600/692. lr: 0.01 . Loss: 2.130216, Acc: 0.481250 time:34.7 s
+[17/500] iter: 692/692. lr: 0.01 . Loss: 2.146255, Acc: 0.478805
+Finish 17 epoch, Loss: 2.147807, Acc: 0.479152
+----------
+epoch 18
+[18/500] iter: 100/692. lr: 0.01 . Loss: 2.158689, Acc: 0.500833 time:35.0 s
+[18/500] iter: 200/692. lr: 0.01 . Loss: 2.124251, Acc: 0.493750 time:34.7 s
+[18/500] iter: 300/692. lr: 0.01 . Loss: 2.125180, Acc: 0.490833 time:34.7 s
+[18/500] iter: 400/692. lr: 0.01 . Loss: 2.135262, Acc: 0.484583 time:34.7 s
+[18/500] iter: 500/692. lr: 0.01 . Loss: 2.135780, Acc: 0.483500 time:34.7 s
+[18/500] iter: 600/692. lr: 0.01 . Loss: 2.125661, Acc: 0.486528 time:34.7 s
+[18/500] iter: 692/692. lr: 0.01 . Loss: 2.139384, Acc: 0.483863
+Finish 18 epoch, Loss: 2.140931, Acc: 0.484213
+----------
+epoch 19
+[19/500] iter: 100/692. lr: 0.01 . Loss: 2.117052, Acc: 0.475000 time:35.0 s
+[19/500] iter: 200/692. lr: 0.01 . Loss: 2.034189, Acc: 0.492917 time:34.7 s
+[19/500] iter: 300/692. lr: 0.01 . Loss: 2.043335, Acc: 0.492778 time:34.7 s
+[19/500] iter: 400/692. lr: 0.01 . Loss: 2.017199, Acc: 0.496042 time:34.7 s
+[19/500] iter: 500/692. lr: 0.01 . Loss: 2.011062, Acc: 0.500500 time:34.7 s
+[19/500] iter: 600/692. lr: 0.01 . Loss: 2.005586, Acc: 0.500972 time:34.7 s
+[19/500] iter: 692/692. lr: 0.01 . Loss: 2.007060, Acc: 0.499398
+Finish 19 epoch, Loss: 2.008511, Acc: 0.499759
+----------
+epoch 20
+[20/500] iter: 100/692. lr: 0.01 . Loss: 1.959149, Acc: 0.524167 time:35.0 s
+[20/500] iter: 200/692. lr: 0.01 . Loss: 1.972463, Acc: 0.507500 time:34.7 s
+[20/500] iter: 300/692. lr: 0.01 . Loss: 1.956724, Acc: 0.511389 time:34.7 s
+[20/500] iter: 400/692. lr: 0.01 . Loss: 1.970856, Acc: 0.509167 time:34.7 s
+[20/500] iter: 500/692. lr: 0.01 . Loss: 1.952697, Acc: 0.513167 time:34.8 s
+[20/500] iter: 600/692. lr: 0.01 . Loss: 1.959415, Acc: 0.512639 time:34.7 s
+[20/500] iter: 692/692. lr: 0.01 . Loss: 1.955772, Acc: 0.512163
+Finish 20 epoch, Loss: 1.957186, Acc: 0.512533
+----------
+epoch 21
+[21/500] iter: 100/692. lr: 0.01 . Loss: 1.826308, Acc: 0.540000 time:35.0 s
+[21/500] iter: 200/692. lr: 0.01 . Loss: 1.798655, Acc: 0.545833 time:34.7 s
+[21/500] iter: 300/692. lr: 0.01 . Loss: 1.838513, Acc: 0.536389 time:34.7 s
+[21/500] iter: 400/692. lr: 0.01 . Loss: 1.845574, Acc: 0.535625 time:34.7 s
+[21/500] iter: 500/692. lr: 0.01 . Loss: 1.858294, Acc: 0.532833 time:34.8 s
+[21/500] iter: 600/692. lr: 0.01 . Loss: 1.870735, Acc: 0.528056 time:34.7 s
+[21/500] iter: 692/692. lr: 0.01 . Loss: 1.872961, Acc: 0.526252
+Finish 21 epoch, Loss: 1.874315, Acc: 0.526633
+Traceback (most recent call last):
+  File "train.py", line 86, in <module>
+    torch.save(model.state_dict(), 'weight/resnet50_3d_mars_%05d.pth'%(epoch))
+  File "/home/lhy/.local/lib/python3.5/site-packages/torch/serialization.py", line 328, in save
+    _legacy_save(obj, opened_file, pickle_module, pickle_protocol)
+  File "/home/lhy/.local/lib/python3.5/site-packages/torch/serialization.py", line 407, in _legacy_save
+    serialized_storages[key]._write_file(f, _should_read_directly(f))
+RuntimeError: write(): fd 24 failed with No space left on device
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-P3D$

@@ -1,0 +1,477 @@
+load weight  layer4.2.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn3.bias <class 'torch.nn.parameter.Parameter'>
+not load weight  fc.weight
+not load weight  fc.bias
+----------
+epoch 1
+[1/20] iter: 500/3944. lr: 0.001 . Loss: 5.177977, Acc: 0.157922 time:217.1 s
+[1/20] iter: 1000/3944. lr: 0.001 . Loss: 4.213077, Acc: 0.286555 time:218.3 s
+[1/20] iter: 1500/3944. lr: 0.001 . Loss: 3.453532, Acc: 0.399995 time:218.5 s
+[1/20] iter: 2000/3944. lr: 0.001 . Loss: 2.889386, Acc: 0.492371 time:218.6 s
+[1/20] iter: 2500/3944. lr: 0.001 . Loss: 2.472857, Acc: 0.563397 time:218.5 s
+[1/20] iter: 3000/3944. lr: 0.001 . Loss: 2.158319, Acc: 0.618508 time:218.6 s
+[1/20] iter: 3500/3944. lr: 0.001 . Loss: 1.915941, Acc: 0.661384 time:218.7 s
+[1/20] iter: 3944/3944. lr: 0.001 . Loss: 1.744251, Acc: 0.691777
+Finish 1 epoch, Loss: 1.744310, Acc: 0.691800
+train.py:90: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  images = Variable(images, volatile=True).cuda()
+train.py:91: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  label = Variable(label, volatile=True).cuda()
+Test Loss: 0.152374, Acc: 0.977447
+Time:1730.2 s
+Traceback (most recent call last):
+  File "train.py", line 103, in <module>
+    torch.save(model.state_dict(), 'weight/resnet50_mars_%05d.pth'%(epoch))
+  File "/home/lhy/.local/lib/python3.5/site-packages/torch/serialization.py", line 327, in save
+    with _open_file_like(f, 'wb') as opened_file:
+  File "/home/lhy/.local/lib/python3.5/site-packages/torch/serialization.py", line 212, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/lhy/.local/lib/python3.5/site-packages/torch/serialization.py", line 193, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'weight/resnet50_mars_00000.pth'
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-2d$ clear
+
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-2d$ python train.py
+/home/lhy/-/模型论文代码/M3D/ResNet50-2d/resnet.py:65: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+  init.kaiming_normal(self.feat.weight, mode='fan_out')
+/home/lhy/-/模型论文代码/M3D/ResNet50-2d/resnet.py:66: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.feat.bias, 0)
+/home/lhy/-/模型论文代码/M3D/ResNet50-2d/resnet.py:67: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.feat_bn.weight, 1)
+/home/lhy/-/模型论文代码/M3D/ResNet50-2d/resnet.py:68: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.feat_bn.bias, 0)
+/home/lhy/-/模型论文代码/M3D/ResNet50-2d/resnet.py:71: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.classifier.weight, std=0.001)
+/home/lhy/-/模型论文代码/M3D/ResNet50-2d/resnet.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.classifier.bias, 0)
+load weight  conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.downsample.0.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.downsample.1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.0.downsample.1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.1.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer1.2.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.downsample.0.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.downsample.1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.0.downsample.1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.1.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.2.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer2.3.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.downsample.0.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.downsample.1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.0.downsample.1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.1.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.2.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.3.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.4.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer3.5.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.downsample.0.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.downsample.1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.0.downsample.1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.1.bn3.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.conv1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn1.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn1.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.conv2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn2.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn2.bias <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.conv3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn3.weight <class 'torch.nn.parameter.Parameter'>
+load weight  layer4.2.bn3.bias <class 'torch.nn.parameter.Parameter'>
+not load weight  fc.weight
+not load weight  fc.bias
+----------
+epoch 1
+[1/20] iter: 500/3944. lr: 0.001 . Loss: 5.140965, Acc: 0.162750 time:217.1 s
+[1/20] iter: 1000/3944. lr: 0.001 . Loss: 4.174599, Acc: 0.291008 time:218.3 s
+[1/20] iter: 1500/3944. lr: 0.001 . Loss: 3.419836, Acc: 0.404188 time:218.6 s
+[1/20] iter: 2000/3944. lr: 0.001 . Loss: 2.855015, Acc: 0.497313 time:218.3 s
+[1/20] iter: 2500/3944. lr: 0.001 . Loss: 2.442390, Acc: 0.567787 time:218.5 s
+[1/20] iter: 3000/3944. lr: 0.001 . Loss: 2.133006, Acc: 0.621964 time:218.4 s
+[1/20] iter: 3500/3944. lr: 0.001 . Loss: 1.893889, Acc: 0.664248 time:218.6 s
+[1/20] iter: 3944/3944. lr: 0.001 . Loss: 1.723865, Acc: 0.694607
+Finish 1 epoch, Loss: 1.723924, Acc: 0.694631
+train.py:90: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  images = Variable(images, volatile=True).cuda()
+train.py:91: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  label = Variable(label, volatile=True).cuda()
+Test Loss: 0.145235, Acc: 0.978231
+Time:1729.6 s
+----------
+epoch 2
+[2/20] iter: 500/3944. lr: 0.001 . Loss: 0.312540, Acc: 0.947875 time:219.0 s
+[2/20] iter: 1000/3944. lr: 0.001 . Loss: 0.297357, Acc: 0.950953 time:218.6 s
+[2/20] iter: 1500/3944. lr: 0.001 . Loss: 0.284425, Acc: 0.953323 time:218.8 s
+[2/20] iter: 2000/3944. lr: 0.001 . Loss: 0.271399, Acc: 0.955750 time:218.8 s
+[2/20] iter: 2500/3944. lr: 0.001 . Loss: 0.260853, Acc: 0.958072 time:218.6 s
+[2/20] iter: 3000/3944. lr: 0.001 . Loss: 0.250564, Acc: 0.959924 time:218.8 s
+[2/20] iter: 3500/3944. lr: 0.001 . Loss: 0.242606, Acc: 0.961516 time:218.6 s
+[2/20] iter: 3944/3944. lr: 0.001 . Loss: 0.234737, Acc: 0.963035
+Finish 2 epoch, Loss: 0.234745, Acc: 0.963068
+Test Loss: 0.058339, Acc: 0.990194
+Time:1733.1 s
+----------
+epoch 3
+[3/20] iter: 500/3944. lr: 0.001 . Loss: 0.149264, Acc: 0.979656 time:219.0 s
+[3/20] iter: 1000/3944. lr: 0.001 . Loss: 0.149512, Acc: 0.979531 time:218.6 s
+[3/20] iter: 1500/3944. lr: 0.001 . Loss: 0.146819, Acc: 0.980021 time:218.5 s
+[3/20] iter: 2000/3944. lr: 0.001 . Loss: 0.143735, Acc: 0.980621 time:218.7 s
+[3/20] iter: 2500/3944. lr: 0.001 . Loss: 0.141073, Acc: 0.981144 time:218.8 s
+[3/20] iter: 3000/3944. lr: 0.001 . Loss: 0.139415, Acc: 0.981409 time:218.8 s
+[3/20] iter: 3500/3944. lr: 0.001 . Loss: 0.137288, Acc: 0.981786 time:218.7 s
+[3/20] iter: 3944/3944. lr: 0.001 . Loss: 0.135576, Acc: 0.982087
+Finish 3 epoch, Loss: 0.135580, Acc: 0.982120
+Test Loss: 0.039102, Acc: 0.992351
+Time:1733.1 s
+----------
+epoch 4
+[4/20] iter: 500/3944. lr: 0.001 . Loss: 0.106194, Acc: 0.987344 time:219.0 s
+[4/20] iter: 1000/3944. lr: 0.001 . Loss: 0.108070, Acc: 0.987328 time:218.8 s
+[4/20] iter: 1500/3944. lr: 0.001 . Loss: 0.106909, Acc: 0.987687 time:218.8 s
+[4/20] iter: 2000/3944. lr: 0.001 . Loss: 0.106816, Acc: 0.987797 time:218.9 s
+[4/20] iter: 2500/3944. lr: 0.001 . Loss: 0.105960, Acc: 0.987888 time:218.9 s
+[4/20] iter: 3000/3944. lr: 0.001 . Loss: 0.104469, Acc: 0.988214 time:219.0 s
+[4/20] iter: 3500/3944. lr: 0.001 . Loss: 0.103633, Acc: 0.988350 time:218.8 s
+[4/20] iter: 3944/3944. lr: 0.001 . Loss: 0.102973, Acc: 0.988432
+Finish 4 epoch, Loss: 0.102977, Acc: 0.988465
+Test Loss: 0.028808, Acc: 0.994901
+Time:1734.3 s
+----------
+epoch 5
+[5/20] iter: 500/3944. lr: 0.001 . Loss: 0.087326, Acc: 0.991641 time:219.1 s
+[5/20] iter: 1000/3944. lr: 0.001 . Loss: 0.084582, Acc: 0.991891 time:218.8 s
+[5/20] iter: 1500/3944. lr: 0.001 . Loss: 0.085383, Acc: 0.991734 time:218.9 s
+[5/20] iter: 2000/3944. lr: 0.001 . Loss: 0.085389, Acc: 0.991738 time:218.9 s
+[5/20] iter: 2500/3944. lr: 0.001 . Loss: 0.085155, Acc: 0.991791 time:219.0 s
+[5/20] iter: 3000/3944. lr: 0.001 . Loss: 0.085533, Acc: 0.991698 time:218.8 s
+[5/20] iter: 3500/3944. lr: 0.001 . Loss: 0.085587, Acc: 0.991714 time:218.7 s
+[5/20] iter: 3944/3944. lr: 0.001 . Loss: 0.085252, Acc: 0.991670
+Finish 5 epoch, Loss: 0.085255, Acc: 0.991704
+Test Loss: 0.025147, Acc: 0.995097
+Time:1734.2 s
+----------
+epoch 6
+[6/20] iter: 500/3944. lr: 0.001 . Loss: 0.076595, Acc: 0.993328 time:219.2 s
+[6/20] iter: 1000/3944. lr: 0.001 . Loss: 0.074370, Acc: 0.993813 time:218.9 s
+[6/20] iter: 1500/3944. lr: 0.001 . Loss: 0.075095, Acc: 0.993750 time:218.7 s
+[6/20] iter: 2000/3944. lr: 0.001 . Loss: 0.074595, Acc: 0.993805 time:218.8 s
+[6/20] iter: 2500/3944. lr: 0.001 . Loss: 0.074701, Acc: 0.993772 time:218.9 s
+[6/20] iter: 3000/3944. lr: 0.001 . Loss: 0.074636, Acc: 0.993740 time:219.0 s
+[6/20] iter: 3500/3944. lr: 0.001 . Loss: 0.074465, Acc: 0.993739 time:218.9 s
+[6/20] iter: 3944/3944. lr: 0.001 . Loss: 0.074489, Acc: 0.993679
+Finish 6 epoch, Loss: 0.074492, Acc: 0.993713
+Test Loss: 0.019125, Acc: 0.996274
+Time:1734.5 s
+----------
+epoch 7
+[7/20] iter: 500/3944. lr: 0.001 . Loss: 0.067109, Acc: 0.995563 time:219.2 s
+[7/20] iter: 1000/3944. lr: 0.001 . Loss: 0.066621, Acc: 0.995242 time:218.7 s
+[7/20] iter: 1500/3944. lr: 0.001 . Loss: 0.067791, Acc: 0.994974 time:218.9 s
+[7/20] iter: 2000/3944. lr: 0.001 . Loss: 0.068252, Acc: 0.994859 time:218.8 s
+[7/20] iter: 2500/3944. lr: 0.001 . Loss: 0.067953, Acc: 0.994903 time:218.9 s
+[7/20] iter: 3000/3944. lr: 0.001 . Loss: 0.067677, Acc: 0.994935 time:218.9 s
+[7/20] iter: 3500/3944. lr: 0.001 . Loss: 0.067798, Acc: 0.994942 time:218.9 s
+[7/20] iter: 3944/3944. lr: 0.001 . Loss: 0.067557, Acc: 0.994957
+Finish 7 epoch, Loss: 0.067559, Acc: 0.994990
+Test Loss: 0.018563, Acc: 0.996862
+Time:1734.4 s
+----------
+epoch 8
+[8/20] iter: 500/3944. lr: 0.001 . Loss: 0.062335, Acc: 0.995844 time:219.3 s
+[8/20] iter: 1000/3944. lr: 0.001 . Loss: 0.061545, Acc: 0.996016 time:218.8 s
+[8/20] iter: 1500/3944. lr: 0.001 . Loss: 0.061421, Acc: 0.995984 time:219.0 s
+[8/20] iter: 2000/3944. lr: 0.001 . Loss: 0.061931, Acc: 0.995914 time:218.9 s
+[8/20] iter: 2500/3944. lr: 0.001 . Loss: 0.061977, Acc: 0.995919 time:219.1 s
+[8/20] iter: 3000/3944. lr: 0.001 . Loss: 0.062037, Acc: 0.995867 time:219.0 s
+[8/20] iter: 3500/3944. lr: 0.001 . Loss: 0.062342, Acc: 0.995875 time:218.8 s
+[8/20] iter: 3944/3944. lr: 0.001 . Loss: 0.062107, Acc: 0.995866
+Finish 8 epoch, Loss: 0.062109, Acc: 0.995900
+Test Loss: 0.016644, Acc: 0.996470
+Time:1734.9 s
+----------
+epoch 9
+[9/20] iter: 500/3944. lr: 0.001 . Loss: 0.056493, Acc: 0.996875 time:219.0 s
+[9/20] iter: 1000/3944. lr: 0.001 . Loss: 0.057495, Acc: 0.996625 time:218.7 s
+[9/20] iter: 1500/3944. lr: 0.001 . Loss: 0.057014, Acc: 0.996745 time:218.7 s
+[9/20] iter: 2000/3944. lr: 0.001 . Loss: 0.057286, Acc: 0.996676 time:218.7 s
+[9/20] iter: 2500/3944. lr: 0.001 . Loss: 0.057677, Acc: 0.996631 time:218.8 s
+[9/20] iter: 3000/3944. lr: 0.001 . Loss: 0.057710, Acc: 0.996599 time:218.8 s
+[9/20] iter: 3500/3944. lr: 0.001 . Loss: 0.058164, Acc: 0.996531 time:218.9 s
+[9/20] iter: 3944/3944. lr: 0.001 . Loss: 0.058526, Acc: 0.996403
+Finish 9 epoch, Loss: 0.058528, Acc: 0.996436
+Test Loss: 0.015281, Acc: 0.997843
+Time:1733.7 s
+----------
+epoch 10
+[10/20] iter: 500/3944. lr: 0.001 . Loss: 0.054438, Acc: 0.997078 time:219.3 s
+[10/20] iter: 1000/3944. lr: 0.001 . Loss: 0.055008, Acc: 0.997000 time:218.9 s
+[10/20] iter: 1500/3944. lr: 0.001 . Loss: 0.054801, Acc: 0.996979 time:219.0 s
+[10/20] iter: 2000/3944. lr: 0.001 . Loss: 0.054634, Acc: 0.997117 time:218.9 s
+[10/20] iter: 2500/3944. lr: 0.001 . Loss: 0.054738, Acc: 0.997103 time:218.9 s
+[10/20] iter: 3000/3944. lr: 0.001 . Loss: 0.054764, Acc: 0.997112 time:219.0 s
+[10/20] iter: 3500/3944. lr: 0.001 . Loss: 0.055297, Acc: 0.997033 time:218.9 s
+[10/20] iter: 3944/3944. lr: 0.001 . Loss: 0.055304, Acc: 0.996991
+Finish 10 epoch, Loss: 0.055305, Acc: 0.997025
+Test Loss: 0.015719, Acc: 0.997254
+Time:1734.7 s
+----------
+epoch 11
+[11/20] iter: 500/3944. lr: 0.001 . Loss: 0.049710, Acc: 0.997953 time:219.2 s
+[11/20] iter: 1000/3944. lr: 0.001 . Loss: 0.050298, Acc: 0.997867 time:218.7 s
+[11/20] iter: 1500/3944. lr: 0.001 . Loss: 0.050927, Acc: 0.997807 time:218.9 s
+[11/20] iter: 2000/3944. lr: 0.001 . Loss: 0.051507, Acc: 0.997719 time:219.0 s
+[11/20] iter: 2500/3944. lr: 0.001 . Loss: 0.051903, Acc: 0.997631 time:218.9 s
+[11/20] iter: 3000/3944. lr: 0.001 . Loss: 0.051985, Acc: 0.997570 time:218.8 s
+[11/20] iter: 3500/3944. lr: 0.001 . Loss: 0.052376, Acc: 0.997509 time:218.7 s
+[11/20] iter: 3944/3944. lr: 0.001 . Loss: 0.052563, Acc: 0.997449
+Finish 11 epoch, Loss: 0.052565, Acc: 0.997482
+Test Loss: 0.015514, Acc: 0.997058
+Time:1734.3 s
+----------
+epoch 12
+[12/20] iter: 500/3944. lr: 0.001 . Loss: 0.049466, Acc: 0.997969 time:219.0 s
+[12/20] iter: 1000/3944. lr: 0.001 . Loss: 0.050158, Acc: 0.997859 time:218.8 s
+[12/20] iter: 1500/3944. lr: 0.001 . Loss: 0.050068, Acc: 0.997813 time:218.8 s
+[12/20] iter: 2000/3944. lr: 0.001 . Loss: 0.050401, Acc: 0.997801 time:218.9 s
+[12/20] iter: 2500/3944. lr: 0.001 . Loss: 0.050752, Acc: 0.997753 time:218.9 s
+[12/20] iter: 3000/3944. lr: 0.001 . Loss: 0.050644, Acc: 0.997760 time:219.0 s
+[12/20] iter: 3500/3944. lr: 0.001 . Loss: 0.050496, Acc: 0.997737 time:219.0 s
+[12/20] iter: 3944/3944. lr: 0.001 . Loss: 0.050592, Acc: 0.997670
+Finish 12 epoch, Loss: 0.050594, Acc: 0.997704
+Test Loss: 0.015567, Acc: 0.997647
+Time:1734.6 s
+----------
+epoch 13
+[13/20] iter: 500/3944. lr: 0.0001 . Loss: 0.046695, Acc: 0.998344 time:219.2 s
+[13/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.044852, Acc: 0.998305 time:218.8 s
+[13/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.043652, Acc: 0.998328 time:218.9 s
+[13/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.043352, Acc: 0.998250 time:218.9 s
+[13/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.042966, Acc: 0.998281 time:218.9 s
+[13/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.042576, Acc: 0.998339 time:218.9 s
+[13/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.042148, Acc: 0.998377 time:218.9 s
+[13/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.042002, Acc: 0.998360
+Finish 13 epoch, Loss: 0.042004, Acc: 0.998394
+Test Loss: 0.012618, Acc: 0.998039
+Time:1734.6 s
+----------
+epoch 14
+[14/20] iter: 500/3944. lr: 0.0001 . Loss: 0.040077, Acc: 0.998594 time:219.0 s
+[14/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.040466, Acc: 0.998570 time:218.9 s
+[14/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.039868, Acc: 0.998646 time:218.9 s
+[14/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.039941, Acc: 0.998625 time:218.8 s
+[14/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.040305, Acc: 0.998491 time:218.8 s
+[14/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.040150, Acc: 0.998510 time:218.7 s
+[14/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.040072, Acc: 0.998538 time:218.7 s
+[14/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.039972, Acc: 0.998491
+Finish 14 epoch, Loss: 0.039973, Acc: 0.998524
+Test Loss: 0.012350, Acc: 0.998039
+Time:1733.8 s
+----------
+epoch 15
+[15/20] iter: 500/3944. lr: 0.0001 . Loss: 0.040784, Acc: 0.998578 time:219.1 s
+[15/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.039989, Acc: 0.998758 time:218.8 s
+[15/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.040063, Acc: 0.998745 time:218.8 s
+[15/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.040073, Acc: 0.998734 time:218.8 s
+[15/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.040125, Acc: 0.998706 time:218.7 s
+[15/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.040209, Acc: 0.998672 time:218.9 s
+[15/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.040062, Acc: 0.998688 time:218.8 s
+[15/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.040021, Acc: 0.998655
+Finish 15 epoch, Loss: 0.040022, Acc: 0.998689
+Test Loss: 0.011971, Acc: 0.998235
+Time:1734.0 s
+----------
+epoch 16
+[16/20] iter: 500/3944. lr: 0.0001 . Loss: 0.039890, Acc: 0.998750 time:219.2 s
+[16/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.039490, Acc: 0.998789 time:218.6 s
+[16/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.039671, Acc: 0.998734 time:218.7 s
+[16/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.039874, Acc: 0.998699 time:218.7 s
+[16/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.039918, Acc: 0.998678 time:218.8 s
+[16/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.040071, Acc: 0.998693 time:218.7 s
+[16/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.040096, Acc: 0.998674 time:218.9 s
+[16/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.040113, Acc: 0.998631
+Finish 16 epoch, Loss: 0.040114, Acc: 0.998665
+Test Loss: 0.012237, Acc: 0.998039
+Time:1733.5 s
+----------
+epoch 17
+[17/20] iter: 500/3944. lr: 0.0001 . Loss: 0.040104, Acc: 0.998688 time:219.2 s
+[17/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.039390, Acc: 0.998711 time:218.7 s
+[17/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.039554, Acc: 0.998693 time:218.5 s
+[17/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.039448, Acc: 0.998684 time:218.7 s
+[17/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.039580, Acc: 0.998722 time:218.6 s
+[17/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.039749, Acc: 0.998716 time:218.5 s
+[17/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.039692, Acc: 0.998770 time:218.8 s
+[17/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.039739, Acc: 0.998736
+Finish 17 epoch, Loss: 0.039740, Acc: 0.998770
+Test Loss: 0.011863, Acc: 0.998039
+Time:1732.9 s
+----------
+epoch 18
+[18/20] iter: 500/3944. lr: 0.0001 . Loss: 0.039580, Acc: 0.998906 time:219.2 s
+[18/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.040056, Acc: 0.998820 time:218.8 s
+[18/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.040249, Acc: 0.998740 time:218.8 s
+[18/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.040241, Acc: 0.998695 time:218.8 s
+[18/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.040282, Acc: 0.998691 time:219.0 s
+[18/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.040123, Acc: 0.998711 time:218.9 s
+[18/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.039977, Acc: 0.998734 time:218.9 s
+[18/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.039984, Acc: 0.998691
+Finish 18 epoch, Loss: 0.039985, Acc: 0.998724
+Test Loss: 0.012252, Acc: 0.998039
+Time:1734.5 s
+----------
+epoch 19
+[19/20] iter: 500/3944. lr: 0.0001 . Loss: 0.041129, Acc: 0.998797 time:219.2 s
+[19/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.041164, Acc: 0.998805 time:218.6 s
+[19/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.040693, Acc: 0.998854 time:218.7 s
+[19/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.040569, Acc: 0.998824 time:218.7 s
+[19/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.040483, Acc: 0.998828 time:218.9 s
+[19/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.040325, Acc: 0.998841 time:218.8 s
+[19/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.040342, Acc: 0.998833 time:219.0 s
+[19/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.040325, Acc: 0.998786
+Finish 19 epoch, Loss: 0.040326, Acc: 0.998819
+Test Loss: 0.012492, Acc: 0.997843
+Time:1733.8 s
+----------
+epoch 20
+[20/20] iter: 500/3944. lr: 0.0001 . Loss: 0.040042, Acc: 0.998766 time:219.1 s
+[20/20] iter: 1000/3944. lr: 0.0001 . Loss: 0.039972, Acc: 0.998813 time:218.7 s
+[20/20] iter: 1500/3944. lr: 0.0001 . Loss: 0.040201, Acc: 0.998781 time:218.8 s
+[20/20] iter: 2000/3944. lr: 0.0001 . Loss: 0.040231, Acc: 0.998836 time:218.9 s
+[20/20] iter: 2500/3944. lr: 0.0001 . Loss: 0.040405, Acc: 0.998819 time:219.0 s
+[20/20] iter: 3000/3944. lr: 0.0001 . Loss: 0.040583, Acc: 0.998805 time:219.0 s
+[20/20] iter: 3500/3944. lr: 0.0001 . Loss: 0.040635, Acc: 0.998808 time:218.9 s
+[20/20] iter: 3944/3944. lr: 0.0001 . Loss: 0.040677, Acc: 0.998760
+Finish 20 epoch, Loss: 0.040679, Acc: 0.998794
+Test Loss: 0.012546, Acc: 0.998235
+Time:1734.6 s
+lhy@PCI:~/-/模型论文代码/M3D/ResNet50-2d$ 
+
