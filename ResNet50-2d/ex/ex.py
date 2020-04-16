@@ -6,7 +6,7 @@ import numpy as np
 from torchvision import transforms
 import resnet
 import time
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 ##########   DATASET   ###########
 batch_size = 1
@@ -14,9 +14,9 @@ batch_size = 1
 normalizer = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 transform = transforms.Compose([ transforms.ToTensor(),  normalizer, ])
 
-img_dir = '../Mars/bbox_test/'
-test_dataset = dataset.imgdataset(dataset_dir=img_dir, txt_path='list/list_mars_test.txt', new_height=256, new_width=128, transform=transform)
-test_loader = torch.utils.data.DataLoader(dataset = test_dataset, batch_size=batch_size, shuffle=False, num_workers=1)
+img_dir = '/home/lhy/public/Dataset/mars/bbox_test/'
+test_dataset = dataset.imgdataset(dataset_dir=img_dir, txt_path='list_mars_test.txt', new_height=256, new_width=128, transform=transform)
+test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False, num_workers=1)
 ###########   MODEL   ###########
 
 for i in range(0,1):
@@ -38,7 +38,7 @@ for i in range(0,1):
 		fea = out.cpu().data
 		fea = fea.numpy()
 
-		print i, num, np.shape(fea)
+		print(i, num, np.shape(fea))
 
 		for j in range(0, np.shape(fea)[0]):
 			str1 = ''
@@ -48,4 +48,4 @@ for i in range(0,1):
 			output.write(str1)
 	output.close()
 	fea_ex_time = time.time() - start_time
-	print fea_ex_time
+	print(fea_ex_time)

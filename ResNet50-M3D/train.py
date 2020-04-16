@@ -6,7 +6,7 @@ import numpy as np
 from torchvision import transforms
 import model.M3D, model.dataset
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 ###########   HYPER   ###########
 base_lr = 0.01
 momentum = 0.9
@@ -15,7 +15,7 @@ gamma = 0.1
 
 num_epoches = 500
 step_size = 200
-batch_size = 20
+batch_size = 10
 ##########   DATASET   ###########
 normalizer = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 transform = transforms.Compose([ transforms.ToTensor(),  normalizer, ])
@@ -67,10 +67,10 @@ for epoch in range(0, num_epoches):
 		out = model(images)
 		loss = criterion(out, label)
 
-		running_loss += loss.data[0] * label.size(0)
+		running_loss += loss.data * label.size(0)
 		_, pred = torch.max(out, 1)
 		num_correct = (pred == label).sum()
-		running_acc += num_correct.data[0]
+		running_acc += num_correct.data
 		optimizer.zero_grad()
 		loss.backward()
 		optimizer.step()

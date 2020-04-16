@@ -276,11 +276,11 @@ def resnet50(pretrained='True', num_classes=1000, train=True):
 	static = model.state_dict()
 	for name, param in weight.items():
 		if name not in static:
-			print 'not load weight ', name
+			print ('not load weight ', name)
 			continue
 		if isinstance(param, nn.Parameter):			
 			param = param.data
-		print 'load weight ', name, type(param)
+		print ('load weight ', name, type(param))
 		static[name].copy_(param)
 	#model.load_state_dict(weight)
 	return model

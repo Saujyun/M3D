@@ -6,7 +6,7 @@ import numpy as np
 from torchvision import transforms
 import resnet
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 ###########   HYPER   ###########
 base_lr = 0.001
 momentum = 0.9
@@ -25,7 +25,7 @@ train_dataset = dataset.imgdataset(dataset_dir=img_dir, txt_path='list/list_trai
 train_loader = torch.utils.data.DataLoader(dataset = train_dataset, batch_size = batch_size, shuffle = True, num_workers = 4)
 
 test_dataset = dataset.imgdataset(dataset_dir=img_dir, txt_path='list/list_val.txt', new_height=256, new_width=128, transform=transform)
-test_loader = torch.utils.data.DataLoader(dataset = test_dataset, batch_size=batch_size/4, shuffle=False, num_workers=4)
+test_loader = torch.utils.data.DataLoader(dataset = test_dataset, batch_size=int(batch_size/4), shuffle=False, num_workers=4)
 ###########   MODEL   ###########
 #resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth
 model = resnet.resnet50(pretrained='resnet50-19c8e357.pth', num_classes=625, train=True)
@@ -68,10 +68,10 @@ for epoch in range(num_epoches):
 
 		loss = criterion(out, label)
 		#print 'running_loss: ', running_loss
-		running_loss += loss.data[0] * label.size(0)
+		running_loss += loss.data * label.size(0)
 		_, pred = torch.max(out, 1)
 		num_correct = (pred == label).sum()
-		running_acc += num_correct.data[0]
+		running_acc += num_correct.data
 		optimizer.zero_grad()
 		loss.backward()
 		optimizer.step()
@@ -92,10 +92,10 @@ for epoch in range(num_epoches):
 		out = model(images)
 
 		loss = criterion(out, label)
-		eval_loss += loss.data[0] * label.size(0)
+		eval_loss += loss.data * label.size(0)
 		_, pred = torch.max(out, 1)
 		num_correct = (pred == label).sum()
-		eval_acc += num_correct.data[0]
+		eval_acc += num_correct.data
 	print('Test Loss: {:.6f}, Acc: {:.6f}'.format(eval_loss/(len(test_dataset)), eval_acc/(len(test_dataset))))
 	print('Time:{:.1f} s'.format(time.time() - start))
 

@@ -1,0 +1,6 @@
+Mars/
+.idea/
+weight/
+fea_test/
+*.pyc
+*.pth
